@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+
+  app:
+    image: quay.io/keycloak/keycloak:19.0.3
+    container_name: kc-simple-api
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    command: ["start-dev"]
+    ports:
+      - 8080:8080
